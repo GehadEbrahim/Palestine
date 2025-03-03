@@ -1,0 +1,757 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --mainColor: rgb(223, 90, 106);
+    --secondColor: rgba(55, 55, 55, 0.202) ;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 1519px;
+    justify-content: end;
+    background-color: rgba(0, 0, 0, 0.831);
+    color: white;
+    height: 40px;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+.logo{
+    background-image: url("Images/شعار القدس.png");
+    background-size: cover;
+    height: 56px;
+    width: 83px;
+    position: fixed;
+    z-index: 200;
+    top: -17px;
+    left: 10px;
+}
+nav ul li a:hover{
+    color:rgba(236, 91, 132, 0.763);
+}
+nav ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color:rgb(187, 165, 165);
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
+}
+nav ul li:hover{
+    cursor: pointer;
+}
+nav ul li:hover::after{
+    width:100%;
+}
+section{
+    height: 695px;
+    width: 1518px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#section_1{
+    background-image: url(Images/Palestine.jpg);
+    background-size: cover;
+    display: grid;
+    color: white;
+    grid-template-rows: 200px repeat(3 , 70px);
+    grid-template-columns: repeat(3, auto);
+    position: relative;
+}
+#section_1 button{
+    width: 90px;
+    height: 35px;
+    border-radius: 5px;
+    border-style: none;
+    grid-row: 4 / 5;
+    position: absolute;
+}
+#section_1  h1{
+    grid-row: 2 / 3;
+    font-size: 110px;
+}
+#section_1  p{
+    grid-row: 3 / 4;
+    font-size: x-large;
+}
+.more{
+    background-color: var(--mainColor);
+    right: 657px;
+    color: white;
+}
+.more:hover{
+    background-color: rgba(223, 90, 106, 0.8);
+}
+#section_1 button:hover{
+    cursor: pointer;
+}
+.start{
+    left: 657px;
+}
+.start:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#section_2{
+    display: grid;
+    height: 570px;
+}
+.sec2_cards{
+    display: flex;
+    gap: 50px;
+
+}
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 32px;
+    margin-top: 15px;
+    position: absolute;
+    margin-bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#section_2 .card{
+    overflow: hidden;
+    line-height: 30px;
+    width: 300px;
+    height: 250px;
+    border: 1px solid var(--secondColor);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+#section_2 h3{
+    margin-top: 70px;
+    font-size: 24px;
+}
+#section_2 h1,
+#section_3 h1,
+#section_4 h1,
+#section_5 h1,
+#section_7 h1,
+#section_9 h1,
+#section_10 h1{
+    position: relative;
+    font-size: 28px;
+}
+
+#section_2 h1::after,
+#section_3 h1::after,
+#section_4 h1::after,
+#section_5 h1::after,
+#section_7 h1::after,
+#section_9 h1::after,
+#section_10 h1::after{
+    content: '';
+    color: transparent;
+    background-color: var(--mainColor);
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:-5px;
+}
+#section_2 button{
+    font-size: 15px;
+    color: rgba(49, 49, 194, 0.788);
+    border: 0;
+    background-color: transparent;
+    z-index: 1; 
+}
+#section_2 button:hover{
+    cursor: pointer;
+}
+#section_2 .layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.2);
+    transform: rotateY(90deg);
+    transform-origin: left top;
+    border-radius: 5px;
+    transition: 1.5s;
+    z-index: -1; 
+}
+#section_2 .card h3,
+#section_2 .card .fa-solid,
+#section_2 .card button{
+    transition: 1.5s;
+}
+#section_2 .card:hover  .layer{
+    transform: rotateY(0deg);
+}
+#section_2 .card:hover h3{
+    color: var(--mainColor);
+}
+#section_2 .card:hover .fa-solid,
+#section_2 .card:hover button{
+    color: var(--mainColor);
+}
+#section_2 p{
+    font-size: 17px;
+}
+#section_3{
+    background-color: #fb627d29;
+    height: 775px;
+}
+#section_3 h1{
+    padding-top: 25px;
+}
+.photos,
+.offers{
+    position: relative;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3 , auto);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.photos .photo {
+    width: 350px;
+    height: 280px;
+    background-size: cover;
+    position: relative;
+}
+.PHOTO_{
+    width: 300px;
+    height: 250px;
+    background-size: cover;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+#photo1{background-image: url(Images/جنين.jpg);
+    border-radius: 5px;}
+#photo2{background-image: url(Images/يافا.jpg);
+    border-radius: 5px;}
+#photo3{background-image: url(Images/غزة.jpg);
+    border-radius: 5px;}
+#photo4{background-image: url(Images/طبريا.jpg);
+    border-radius: 5px;}
+#photo5{background-image: url(Images/رام\ الله.jpg);
+    border-radius: 5px;}
+#photo6{background-image: url(Images/حيفا.jpg);
+    border-radius: 5px;}
+.layer-content {
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 280px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.558);
+    opacity: 0;
+    color: white;
+    transition: opacity 0.8s;
+}
+.layer-content:hover{
+    opacity: 1;
+}
+.layer-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width:150px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.layer-content-title,
+.fa-pen-to-square,
+.fa-magnifying-glass{
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: all 1.5s;
+}
+.fa-pen-to-square,
+.fa-magnifying-glass{
+    color: var(--mainColor);
+}
+.layer-content:hover .layer-content-title,
+.layer-content:hover .fa-pen-to-square,
+.layer-content:hover .fa-magnifying-glass{
+transform: rotateX(0);
+}
+.fa-pen-to-square{
+    position: absolute;
+    left: 35px;
+    font-size:28px;
+}
+.fa-magnifying-glass{
+    position: absolute;
+    left: 80px;
+    font-size:28px;
+}
+/* .photos .photo::before{
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background-color: rgba(40, 33, 33, 0.68);
+    position: absolute;
+    transition: 1s;
+}
+.photos .photo:hover::before{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+} */
+.offers .offer{
+    display: grid;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    position: relative;
+}
+.offers .offer p{
+    margin-top: -25px;
+    font-size: smaller;
+    text-align: start;
+    margin-left: 40px;
+}
+.offers .offer::before{
+    content: ' ';
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: rgba(40, 33, 33, 0.68);
+    position: absolute;
+    transition: 1s;
+}
+.offers .offer h4,
+.offers .offer .fa-arrow-right
+{
+    transition: all 1s;
+    z-index: 3;
+}
+.offers .offer:hover h4,
+.offers .offer:hover .fa-arrow-right
+{
+    color: var(--mainColor);
+    filter: drop-shadow(0 0 9px black)
+}
+.offers .offer:hover::before{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+#section_4{
+    margin-top: 50px;
+    height: 560px;
+}
+.fa-arrow-right{
+    position: absolute;
+    left: 38px;
+    top: 7px;
+    font-size: 25px;
+}
+#section_5{
+    display: flex;
+    height:330px;
+    gap: 200px;
+}
+.sec5Photo{
+    background-image: url(Images/ارض\ غزة.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    border-radius: 5px;
+}
+.fa-circle-check{
+    color: var(--mainColor);
+}
+.bullets{
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bullets .one{
+    background-color: rgba(128, 128, 128, 0.272);
+}
+.circle{
+    height: 8px;
+    width: 8px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+.circle:hover{
+    background-color: rgba(128, 128, 128, 0.272);
+    cursor: pointer;
+}
+.sec5Text{
+    text-align: start;
+    width: 350px;
+    height: 200px;
+    padding-bottom: 220px;
+}
+#section_5 h1::after{
+    left: 25px;
+    bottom: 30px;
+    font-size: 30px;
+}
+
+#section_5 ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+}
+#section_5 ul i{
+    display: inline;
+}
+.sec5Text h1{
+    line-height: 120px;
+}
+.sec5Text p{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.sec5Text li{
+    margin-bottom: 10px;
+}
+#section_6{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, 1fr);
+    color: var(--mainColor);
+    background-image: url(Images/Palestine.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.continter{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.top,
+.bottom{
+    height: 200px;
+    background-color: white;
+    width: 1519px;
+}
+.middle{
+    grid-row: 2 / 3;
+    display: flex;
+    gap: 200px ;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+.awards,
+.coffee,
+.project,
+.happy{
+    color: white;
+    position: relative;
+}
+.awards i ,
+.coffee i,
+.project i,
+.happy i{
+    position: absolute;
+    top: -50px;
+}
+#section_6 p,
+#section_6 h3{
+    font-size: larger;
+}
+.prices{
+    display: flex;
+    gap: 100px;
+    margin-top: 120px;
+    justify-content: center;
+}
+.price {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 250px;
+    height: 340px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+    color: black;
+    position: relative; 
+}
+.price::after{
+    content: '';
+    height: 0;
+    width: 100%;
+    top: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(40, 33, 33, 0.68);
+    position: absolute;
+    transition: 1s;
+    z-index: 1;
+}
+.price:hover::after{
+    height: 100%;
+    opacity: 1;
+}
+.month{
+    border-radius: 50px;
+    border: 2px solid var(--mainColor);
+    width: 100px;
+    height: 100px;
+    display: grid;
+    margin-left: 10px;
+}
+#section_7{
+    height: 500px;
+}
+._9{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: -20px;
+    margin-top: 10px;
+    color: black;
+}
+
+.basic{
+    margin-top: 10px;
+}
+.price button{
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100px;
+    margin-left: 15px;
+    transition: all 1s;
+    z-index: 3;
+}
+.price:hover button{
+    background-color: rgba(147, 143, 143, 0.097);
+    /* border-color: black ; */
+    border-width: 1px;
+}
+
+#section_8{
+    display: grid;
+    grid-template-rows: 150px auto 150px ;
+    color: white;
+    background-image: url(Images/Jaffa.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+#section_8 .top_sec8{
+    background-color: white;
+    grid-row: 1 /2;
+    height: 150px;
+}
+#section_8 .middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2/3 ;
+}
+#section_8 .bottom{
+    height: 150px;
+}
+.cont{
+    width: 500px;
+    margin-left: 50px;
+}
+#section_8 p{ 
+    text-align: start;
+}
+#section_8 .photo{
+    background-image: url(Images/girl2.jpg);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 25px;
+}
+#section_8 .Top{
+    display: flex;
+}
+#section_8 .text{
+    margin-left: 20px;
+}
+.designer{
+    color: white;
+    font-size: smaller;
+}
+.Lorem{
+    font-size: 15px
+}
+#section_9{
+    display: grid;
+    height: 400px;
+}
+#section_9 .cards{
+    display: flex;
+    gap: 50px;
+}
+#section_9 .card{
+    height: 320px;
+    width: 320px;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    transition: 0.5s;
+}
+#section_9 .card {
+padding-top: 10px;
+}
+#section_9 .photo{
+    width: 280px;
+    height: 280px;
+    background-size: cover;
+}
+#section_9 .card .photo .fa-brands{
+    position: absolute;
+    right: 20px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#section_9 .card .photo{
+    position: relative;
+}
+
+#section_9 .one{
+    background-image: url(Images/kid6.jpg);
+}
+#section_9 .two{
+    background-image: url(Images/kid4.jpeg);
+}
+#section_9 .three{
+    background-image: url(Images/kid5.jpg);
+}
+
+#section_9 .card:hover .fa-brands{
+    opacity: 1;
+    cursor: pointer;
+}
+#section_9 .card:hover{
+    background-color: rgba(128, 128, 128, 0.347);
+}
+#section_9 .card p{
+   font-size: smaller;
+}
+#section_10{
+    display: grid;
+}
+.news{
+    display: flex;
+    width: 300px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.new{
+    padding: 0 15px;
+    transition: background-color 1s ;
+}
+.news .one{
+    background-image: url(Images/يافاتنا.jpg);
+}
+.news .two{
+    background-image: url(Images/يافا_زقاق.jpg);
+}
+.news .three{
+    background-image: url(Images/يافا_.jpg);
+}
+.news .img{
+    background-size: cover;
+    width: 250px;
+    height: 280px;
+}
+.name_date_comm p{
+    font-size: 12px;
+}
+.name_date_comm{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    padding: 10px 0 ;  
+    text-align: start;
+    position: relative;
+    margin-left:15px;
+}
+.fa-user{
+    position: absolute;
+    left: -7px;
+    font-size: 15px;
+}
+.new .more:hover{
+    cursor: pointer;
+}
+.new .more{
+    color: var(--mainColor);
+    font-size: 15px;
+    padding: 10px 0;
+    background-color: transparent;
+}
+.new h5,
+.new p{
+    text-align: start;
+}
+.new .Lorem{
+    width: 220px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.764);
+    line-height: 17px;
+}
+.new_top{
+    display: grid;
+    justify-content: start;
+}
+.new:hover{
+    background-color: rgba(63, 64, 64, 0.224);
+}
+#section_11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainColor);
+    height: 60px;
+}
+#section_11 .icons{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    font-size: 25px;
+}
